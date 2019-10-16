@@ -10,11 +10,11 @@ Parameters:
     Description: Secret. It might look something like 9b189a1654643522561f7b3ebd44a1531a4287af OAuthToken with access to Repo. Go to https://github.com/settings/tokens
     Type: String
   GitHubUser:
-    Default: stelligent
+    Default: sarathkrish
     Description: GitHub UserName
     Type: String
   Repo:
-    Default: sagemaker-pipeline
+    Default: SageMakerPipeline
     Description: GitHub Repo to pull from. Only the Name. not the URL
     Type: String
   Branch:
@@ -104,7 +104,7 @@ Resources:
                 - echo "Installing wget and boto3"
                 - pip3 install wget
                 - pip3 install boto3
-		- printenv
+                - printenv
             build:
               commands:
                 - echo "Running training.py"
@@ -140,7 +140,7 @@ Resources:
                 - echo "Installing wget and boto3"
                 - pip3 install wget
                 - pip3 install boto3
-                - pip3 install numpy
+                - conda install numpy
             build:
               commands:
               - echo "Running test.py"
